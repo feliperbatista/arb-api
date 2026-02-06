@@ -11,6 +11,9 @@ export async function listarCategorias(req: AuthRequest, res: Response) {
   try {
     const pool = await getPool(base);
 
+
+
+    
     const result = await pool.query(`
         SELECT CAIXA, 'Caixa' AS Tipo FROM ${tabelaCaixas}
         UNION ALL
