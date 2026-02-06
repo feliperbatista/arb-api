@@ -13,6 +13,7 @@ export async function listarCategorias(req: AuthRequest, res: Response) {
     const result = await pool.query(`
       SELECT Categoria
       FROM ${tabela}
+      ORDER BY Categoria
     `);
 
     res.json(result.recordset);

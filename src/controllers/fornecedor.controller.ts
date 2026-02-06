@@ -14,6 +14,7 @@ export async function listarCategorias(req: AuthRequest, res: Response) {
       SELECT Nome,
         Nome_Fantasia
       FROM ${tabela}
+      ORDER BY Nome
     `);
 
     res.json(result.recordset);
