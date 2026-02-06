@@ -5,7 +5,7 @@ import { authMiddleware } from "../middlewares/auth.middleware";
 const router = Router();
 
 router.get(
-  "/formaPagamento",
+  "/forma-pagamento",
   authMiddleware,
   listarCategorias
 );
