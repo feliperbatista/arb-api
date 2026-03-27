@@ -4,7 +4,12 @@ import { getPool } from "../config/db";
 import { StringValue } from "ms";
 
 export async function login(req: any, res: any) {
+  console.log("HEADERS:", req.headers);
+  console.log("RAW BODY:", req.rawBody);
+  console.log("BODY:", req.body);
+
   const { usuario, senha } = req.body;
+
 
   if (!usuario || !senha) {
     return res.status(400).json({ error: "Usuário e senha obrigatórios" });
